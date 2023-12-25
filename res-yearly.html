@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="css/sap-style.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spendwise.io - Result</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class ="heading">SPENDWISE.IO</div>
+        <nav>
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+            <h2 >Upload Successful!</h2>
+            <p>Your file has been successfully uploaded and processed.</p>
+            <div class="container">
+                <section class="sec-result" >
+                    <h3>Here you can find total Withdrawal and deposit amount.</h3>
+                    <iframe src="Charts/toDonut.php" frameborder="0" height="400" width="100%"></iframe>
+                    
+                </section>
+                 
+                <section class="sec-resultc2">
+                     <iframe src="Charts/bar.php" class="centered-iframe" frameborder="0" height="450" width="100%" ></iframe>
+                 </section>  
+                 <section class="sec-result">
+                    <iframe src="Charts/tvalV1.php" class="centered-iframe" frameborder="0" height="500"  width="100%"  ></iframe>
+                </section>   
+             
+             <section class="sec-result">
+                    <iframe src="Charts/TtypeChart.php" class="centered-iframe" frameborder="0" height="400" width="100%" ></iframe>
+              </section>   
+                <section class="sec-result">
+                    <iframe src="Charts/yearwise1.php" class="centered-iframe" frameborder="0" height="550" width="100%" ></iframe>
+               </section>   
+       
+                    
+                   
+            </div>
+            <button id="generatePDF">Proceed to generate PDF</button>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Spendwise.io. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById("generatePDF").addEventListener("click", function() {
+          window.location.href = "Charts/a4y.php"; // Redirects to a4.php when the button is clicked
+        });
+    </script>
+</body>
+</html>

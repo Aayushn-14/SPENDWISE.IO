@@ -1,0 +1,73 @@
+/* Styles for print media */
+
+/* Set page size and orientation (e.g., A4 portrait) */
+@page {
+    size: A4;
+    margin: 1cm;
+}
+
+/* Define page margins */
+body {
+    margin: 0;
+}
+
+/* Hide elements that are not relevant for print */
+.no-print {
+    display: none;
+}
+
+/* Control page breaks */
+.page-break {
+    page-break-before: always;
+}
+
+/* Style headers and footers */
+@page {
+    @top-center {
+        content: "SPENDWISE";
+    }
+    @bottom-center {
+        content: "Page " counter(page);
+    }
+}
+
+/* Additional print-specific styles */
+.print-text {
+    font-size: 14pt;
+    color: #333;
+}
+
+.print-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.print-table th, .print-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+.heading {
+    display: none;
+}
+
+/* Custom styles for specific elements in your content */
+@media print {
+    .heading{
+        height: 30px;
+        width: 100%;
+        /* background-color: #e62828; */
+        color: #22090907;
+        text-align: center; /* Center-align the heading in the PDF */
+        font-size: 18pt; /* Adjust the font size as needed */
+        margin-top: 20px; /* Add top margin to separate the heading from the content */
+    }
+
+
+
+
+
+    .skip-in-pdf {
+        display: none;
+    }
+}

@@ -1,0 +1,135 @@
+
+@media print {
+    iframe {
+         display: block; /* Ensure iframes are visible when printing */
+         visibility: visible !important; /* Ensure iframes are visible when printing */
+         /* height: auto;     */
+    }
+    button#generatePDF {
+        display: none;
+    }
+}
+.a4-container {
+    page-break-after: always; /* Add a page break after each container */
+}
+.a4:last-child {
+    page-break-after: avoid; /* Avoid unnecessary page break after the last container */
+}
+.a4-container {
+    position: relative;
+    width: 210mm; /* A4 width in millimeters */
+    height: 297mm; /* A4 height in millimeters */
+    background-color: #f0f0f0; /* Background color */
+    border: 1px solid #000; /* Border for visualization */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 0px; /* Add some padding for content */
+    font-family: Arial, sans-serif; /* Choose a font */
+    
+        }
+        .a4-container .heading{
+            background-color: #333;
+            color: #fff;
+            margin-top: 70px;
+            border: 1px solid #000;
+            max-height: 120px;
+            box-shadow: 0px 0px 44px 10px rgba(0, 0, 0, 0.3);
+        }
+        .a4-container .heading h1{
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            font-size: 25px;
+            letter-spacing: 0.6px;
+            word-spacing: 1.2px;
+            font-weight: 400;
+            text-decoration: rgb(68, 68, 68);
+            text-align: center;
+        } 
+        .a4-container .details
+        {
+            margin-top: 20px;
+            border : solid 1px #333;
+
+            padding :20px;
+            
+        }
+        .column {
+            float: left;
+            width: 50%; /* Each column takes 50% of the width */
+        }
+        .details {
+            overflow: hidden; /* Clear the float */
+        }
+
+        /* Style for the h5 elements */
+        .details h5 {
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            margin: 10px 0; /* Add some margin between the h5 elements */
+        }
+        @media print {
+            /* Reset default margin and padding */
+            body, html {
+                margin: 0;
+                padding: 0;
+            }
+        }
+        div.bar{
+             color: #fff;
+             height: 300px;
+             width: 60px;
+             position: absolute;
+             right: 0;
+             border: solid 1px #333;
+            background-color: #333;
+            margin-left: 0px;
+            text-align: left;
+            /* flex: right; */
+
+        }
+        div.bar h3{
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            transform: rotate(270deg);
+            /* height: -40px; */
+            
+            /* margin-bottom: 40px; */
+        }
+
+
+        #tbox{
+            margin-top: 50px;
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #333;
+            border-top-right-radius: 19%;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+            height: 250px;
+        }
+
+        #tbox h5 {
+            margin-top: 30px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: darkslategray;
+            font-size: medium;
+            font-style: italic;
+        }
+        #tbox h4 {
+            margin-top: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: darkslategray;
+            font-size: medium;
+            font-style: italic;
+        }
+
+
+    button#generatePDF{
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-left: 42%;
+    }
+
+        
+        

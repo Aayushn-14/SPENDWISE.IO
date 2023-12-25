@@ -1,0 +1,83 @@
+<!-- this is working -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spendwise.io - Home</title>
+    
+    <script src="https://kit.fontawesome.com/cbf7efe0eb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles-index.css">
+</head>
+<body>
+    <header class="headclass">
+        <div class ="heading">SPENDWISE.IO</div>
+        <nav>
+            
+            <ul>
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Get help</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro" style="background-image: url('./img/GetStartedimg.jpg');">
+            <h1>Welcome to Spendwise.io</h1>
+            <p>Your solution for expense tracking and financial management.</p>
+            <button id="gsBtn" onclick="scrollToSection('upform')">Click here</button>
+        </section>
+        
+        <section id="help"  class="intro" style="background-image: url('./img/Introimg.jpg');">
+           <!-- Content for help section -->
+        </section>
+        
+        <section class="intro" style="background-image: url('./img/Processimg.jpg');">
+           <!-- Content for process section -->
+        </section>
+        
+        <section class="intro" style="background-image: url('./img/Analysisimg.jpg');">
+           <!-- Content for analysis section -->
+        </section>
+        
+         <section id="upform" class="file-upload">
+            <div id="upf">
+                <i class="fa-solid fa-cloud-arrow-up fa-3x"></i>
+                <h2>Upload Your File</h2>
+                <form id="uploadForm" action="upload.php" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
+                    <input type="file" name="file" id="fileInput" accept=".pdf, .xlsx, .xls">
+                    <label for="analysisMethod">Select Analysis Period:</label>
+                    <select name="analysisMethod" id="analysisMethod">
+                        <option value="">Select</option>
+                        <option value="Day-Wise">Day-Wise</option>
+                        <option value="Month-Wise">Month-Wise</option>
+                        <option value="Year-Wise">Year-Wise</option>
+                    </select>
+                    <div>
+                        <button class="learnMoreBtn" type="submit">Submit</button>
+                    </div> 
+                    <p id="uploadMessage"></p>
+                </form>
+            </div>
+            
+        </section>
+
+
+        <section class="intro" style="background-image: url('./img/Downloadreports.jpg');">
+            <!-- Content for download reports section -->
+        </section>
+      
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Spendwise.io. All rights reserved.</p>
+    </footer>
+
+    <script src="./Js/script.js"></script>
+</body>
+</html>

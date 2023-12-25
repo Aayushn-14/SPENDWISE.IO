@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spendwise.io - Home</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, p, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Apply some basic styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .intro {
+            background-size: cover;
+            background-position: center;
+            height: 600px;
+            margin-bottom: 30px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .intro h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            margin-left: 20px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .intro button {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .features {
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        .features h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .features ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Style for the file upload section */
+        .file-upload {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .file-upload h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        label[for="analysisMethod"] {
+            display: block;
+            background-color: #fff;
+            color: #333;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #analysisMethod {
+            width: 50%;
+            padding: 10px;
+            border-radius: 5px;
+            color: #333;
+            background-color: #fff;
+            margin-bottom: 10px;
+        }
+
+        #analysisMethod option {
+            color: #333;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="intro" style="background-image: url('./img/GetStartedimg.jpg');">
+            <h1>Welcome to Spendwise.io</h1>
+            <p>Your solution for expense tracking and financial management.</p>
+            <button id="learnMoreBtn">Get Started</button>
+        </section>
+
+        <!-- Other sections with background images -->
+        
+        <!-- Add this form to your main section for file upload -->
+        <section class="file-upload">
+            <h2>Upload Your File</h2>
+            <form id="uploadForm" action="upload.php" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" id="fileInput" accept=".pdf, .xlsx, .xls">
+                <label for="analysisMethod">Select Analysis Period:</label>
+                <select name="analysisMethod" id="analysisMethod">
+                    <option value="Day-Wise">Day-Wise</option>
+                    <option value="Month-Wise">Month-Wise</option>
+                    <option value="Year-Wise">Year-Wise</option>
+                </select>
+                <div>
+                    <button class="learnMoreBtn" type="submit">Submit</button>
+                </div> 
+            </form>
+            <p id="uploadMessage"></p>
+        </section>
+
+        <!-- Other sections or content -->
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Spendwise.io. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
